@@ -9,7 +9,8 @@ namespace GraphicsGorilla
   class Window
   {
     GLFWwindow *window;
-    std::function<void()> Draw;
+    std::function<void()> Init;
+    std::function<void(int,int)> Draw;
     std::function<void()> Update;
 
   public:
@@ -48,14 +49,15 @@ namespace GraphicsGorilla
         }
         if (Draw)
         {
-          Draw();
+          int width, height;
+          glfwGetFramebufferSize(window, &width, &height);
+          Draw(width, height);
         }
         glfwSwapBuffers(window);
         glfwPollEvents();
       }
     }
-
-    void SetDrawFunction(std::function<void()> draw)
+    void SetDrawFunction(std::function<void(int,int)> draw)
     {
       Draw = draw;
     }

@@ -1,6 +1,6 @@
 #include "Font.hpp"
 
-namespace GraphicsGorrila
+namespace GraphicsGorilla
 {
 	namespace TwoD
 	{

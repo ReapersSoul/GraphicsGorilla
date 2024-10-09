@@ -2,13 +2,13 @@
 #include <GL/glew.h>
 #include <GLFW/glfw3.h>
 #include <glm/glm.hpp>
-#include <freetype2/ft2build.h>
+#include <ft2build.h>
 #include <freetype/freetype.h>
 #include <map>
 #include <string>
 #include <vector>
 
-namespace GraphicsGorrila
+namespace GraphicsGorilla
 {
 	namespace TwoD
 	{
